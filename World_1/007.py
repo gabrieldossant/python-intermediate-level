@@ -1,4 +1,4 @@
-# Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada
+# Create an algorithm that reads a number and shows its double, triple and square root
 
 n = int(input('Enter a number: '))
 print('Double: {}'.format(n*n))
