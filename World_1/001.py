@@ -91,7 +91,12 @@ def detailsAbbreviations():
     elif r.upper()[0] == "N":
         exit()
     else:
-        print('Unrecognizable command')
-        detailsAbbreviations()
+        error(r)        
 
+def error(res):
+    print('|----------------------------------|')
+    print('| --   Unrecognizable command   -- |')
+    print('|                                  |')
+    res = input('| Type ONLY (Y) OR (N): ')
+    
 chooseFrom()
