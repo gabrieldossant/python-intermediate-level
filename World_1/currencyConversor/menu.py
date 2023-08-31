@@ -13,3 +13,5 @@ def chooseFrom():
     print('|----------------------------------|')
     f = int(input('| COIN : '))
     identify.identifyFrom(f) 
+
+chooseFrom()

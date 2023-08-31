@@ -3,6 +3,7 @@ import os
 # Currency converter 
 
 def chooseFrom():
+    print("\n" * os.get_terminal_size().lines)
     print('|----------------------------------|')
     print('| ---    CURRENCY CONVERSOR    --- |')
     print('|----------------------------------|')
@@ -14,6 +15,7 @@ def chooseFrom():
     print('| [ 0 ] Details of abbreviations:  |')
     print('|----------------------------------|')
     f = int(input('| COIN : '))
+    print("\n" * os.get_terminal_size().lines)
     identifyFrom(f) 
 
 def identifyFrom(x):
@@ -42,7 +44,49 @@ def brl():
     print('| [ 3 ] GBP:                       |')
     print('|----------------------------------|')
     x = int(input('| COIN : '))
-    
+    print("\n" * os.get_terminal_size().lines)
+    brlCalculate(x)
+
+def brlCalculate(x):
+    if x == 1:
+        print('|----------------------------------|')
+        print('| ---   ENTER A NUMBER  (BRL)  --- |')
+        print('|----------------------------------|')
+        conv = float(input('| : '))
+        res = conv / 4.90
+        print("\n" * os.get_terminal_size().lines)
+        print('|----------------------------------|')
+        print('| (BRL): R$ {} | (USD): R$ {:.1f}  |'.format(conv, res))
+        print('|----------------------------------|')
+        print('|                                  |')
+        goBackMenu()
+    elif x == 2:
+        print('|----------------------------------|')
+        print('| ---   ENTER A NUMBER  (EUR)  --- |')
+        print('|----------------------------------|')
+        conv = float(input('| : '))
+        res = conv / 4.90
+        print("\n" * os.get_terminal_size().lines)
+        print('|----------------------------------|')
+        print('| (BRL): R$ {} | (EUR): R$ {:.1f}  |'.format(conv, res))
+        print('|----------------------------------|')
+        print('|                                  |')
+        goBackMenu()
+    elif x == 3:
+        print('|----------------------------------|')
+        print('| ---   ENTER A NUMBER  (B)  --- |')
+        print('|----------------------------------|')
+        conv = float(input('| : '))
+        res = conv / 4.90
+        print("\n" * os.get_terminal_size().lines)
+        print('|----------------------------------|')
+        print('| (BRL): R$ {} | (USD): R$ {:.1f}  |'.format(conv, res))
+        print('|----------------------------------|')
+        print('|                                  |')
+        goBackMenu()
+    else:
+        errorChooseBrl
+
 def usd():
     print('|----------------------------------|')
     print('| ---    CURRENCY CONVERSOR    --- |')
@@ -53,6 +97,22 @@ def usd():
     print('| [ 3 ] GBP:                       |')
     print('|----------------------------------|')
     x = int(input('| COIN : '))
+    print("\n" * os.get_terminal_size().lines)
+    usdCalculate(x)
+
+def usdCalculate(x):
+    print('|----------------------------------|')
+    print('| ---   ENTER A NUMBER  (USD)  --- |')
+    print('|----------------------------------|')
+    conv = float(input('| : '))
+    res = conv * 4.90
+    print("\n" * os.get_terminal_size().lines)
+    print('|----------------------------------|')
+    print('| (USD): R$ {} | (BRL): R$ {:.1f}  |'.format(conv, res))
+    print('|----------------------------------|')
+    print('|                                  |')
+    goBackMenu()
+
 
 def eur():
     print('|----------------------------------|')
@@ -85,18 +145,48 @@ def detailsAbbreviations():
     print('| EUR = Euro                       |')
     print('| GBP = Pound Sterling             |')
     print('|----------------------------------|')
-    r = input('| Menu (Y)/(N): ')
+    goBackMenu()     
+
+def errorCaracter():
+    print("\n" * os.get_terminal_size().lines)
+    print('|----------------------------------|')
+    print('| -- ! Unrecognizable command ! -- |')
+    print('|----------------------------------|')
+    print('| --  TYPE ONLY [ Y ] OR [ N ]  -- |')
+    print('|----------------------------------|')
+    goBackMenu()
+
+def errorChooseBrl():
+    print("\n" * os.get_terminal_size().lines)
+    print('|----------------------------------|')
+    print('| -- ! Unrecognizable NUMBER ! -- |')
+    print('|----------------------------------|')
+    print('| --          TYPE ONLY         -- |')
+    print('|      [ 1 ] / [ 2 ] / [ 3 ]       |')
+    print('|----------------------------------|')
+
+
+def errorNumber():
+    print("\n" * os.get_terminal_size().lines)
+    print('|----------------------------------|')
+    print('| -- ! Unrecognizable NUMBER ! -- |')
+    print('|----------------------------------|')
+    print('| --         TYPE ONLY          -- |')
+    print('|  [ 1 ] [ 2 ] [ 3 ] [ 4 ] [ 0 ]  |')
+    print('|----------------------------------|')
+    chooseFrom()
+
+def goBackMenu():
+    r = input('| Go back to Menu? [Y]/[N]: ')
     if r.upper()[0] == "Y":
+        print("\n" * os.get_terminal_size().lines)
         chooseFrom()
     elif r.upper()[0] == "N":
+        print('|----------------------------------|')
+        print('|         T H A N K Y O U          |')
+        print('|----------------------------------|')
         exit()
     else:
-        error(r)        
+        errorCaracter()
 
-def error(res):
-    print('|----------------------------------|')
-    print('| --   Unrecognizable command   -- |')
-    print('|                                  |')
-    res = input('| Type ONLY (Y) OR (N): ')
-    
 chooseFrom()
