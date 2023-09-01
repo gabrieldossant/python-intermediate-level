@@ -2,9 +2,9 @@ import os
 
 # Currency converter 
 
-def chooseFrom():
-    print("\n" * os.get_terminal_size().lines)
-    print('|----------------------------------|')
+def chooseFrom():  #  Function for choosing the currency you want to convert
+    print("\n" * os.get_terminal_size().lines) # Function to clean the Terminal
+    print('|----------------------------------|') # Menu display
     print('| ---    CURRENCY CONVERSOR    --- |')
     print('|----------------------------------|')
     print('| - FROM:                          |')
@@ -14,25 +14,25 @@ def chooseFrom():
     print('| [ 4 ] GBP:                       |')
     print('| [ 0 ] Details of abbreviations:  |')
     print('|----------------------------------|')
-    f = int(input('| COIN : '))
-    print("\n" * os.get_terminal_size().lines)
-    identifyFrom(f) 
+    f = int(input('| COIN : ')) # User input to choose between 1 and 4, the currency they want
+    print("\n" * os.get_terminal_size().lines) # Function to clean the Terminal
+    identifyFrom(f) # Calling the function and passing the parameter of the user's choice
 
-def identifyFrom(x):
-    if (x == 0):
-        return detailsAbbreviations()
-    elif (x == 1):
-        return brl()
-    elif (x == 2):
-        return usd()
-    elif (x == 3):
-        return eur()
-    elif (x == 4):
-        return gbp()
-    else:
-        errorNumber()
+def identifyFrom(x): # Function for identify the user's choice
+    if (x == 0): # If this condition is true,
+        detailsAbbreviations() # Call the function to show details of abbreviations 
+    elif (x == 1): # If this condition is true, 
+        brl() # Call the function to convert from BRL to others 
+    elif (x == 2): # If this condition is true,
+        usd() # Call the function to convert from USD to ohters
+    elif (x == 3): # If this condition is true, 
+        eur() # Call the function to convert from EUR to others
+    elif (x == 4): # If this condition is true,
+        gbp() # Call the function to convert from GBP to others
+    else: # Otherwise
+        errorNumber() # Call the function Error 
 
-def brl():
+def brl(): # Function to convert from BRL to others 
     print('|----------------------------------|')
     print('| ---    CURRENCY CONVERSOR    --- |')
     print('|----------------------------------|')
@@ -45,19 +45,19 @@ def brl():
     print("\n" * os.get_terminal_size().lines)
     brlCalculate(x)
 
-def brlCalculate(x):
-    if x == 1:
+def brlCalculate(x): # Function to calculate the conversions from BRL to USD, EUR and GBP.
+    if x == 1: 
         print('|----------------------------------|')
         print('| ---   ENTER A NUMBER  (BRL)  --- |')
         print('|----------------------------------|')
-        conv = float(input('| : '))
-        res = conv * 0.20
-        print("\n" * os.get_terminal_size().lines)
+        conv = float(input('| : ')) # User's input any value here
+        res = conv * 0.20 # Do the conversion
+        print("\n" * os.get_terminal_size().lines) # Function to clean the Terminal
         print('|----------------------------------|')
-        print('| (BRL): R$ {} | (USD): R$ {:.1f}  |'.format(conv, res))
+        print('| (BRL): R$ {} | (USD): R$ {:.1f}  |'.format(conv, res)) # Show the result
         print('|----------------------------------|')
         print('|                                  |')
-        goBackMenu()
+        goBackMenu() # Call the function that asks if you want to continue using the program
     elif x == 2:
         print('|----------------------------------|')
         print('| ---   ENTER A NUMBER  (BRL)  --- |')
@@ -85,7 +85,7 @@ def brlCalculate(x):
     else:
         errorChoose()
 
-def usd():
+def usd(): 
     print('|----------------------------------|')
     print('| ---    CURRENCY CONVERSOR    --- |')
     print('|----------------------------------|')
