@@ -88,6 +88,7 @@ def main():
         print('Double: {}'.format(n*n))
         print('Triple: {}'.format(n*n*n))
         print('Square root: {:.2f}'.format(n**(1/2)))
+        goBackMain()
 
     elif c == 8:
         print("\n" * os.get_terminal_size().lines)
@@ -96,15 +97,17 @@ def main():
         n1 = float(input('Type your first grade: '))
         n2 = float(input('Type your second grade: '))
         print('The average is {}'.format((n1+n2)/2))
+        goBackMain()
 
     elif c == 9:
         print("\n" * os.get_terminal_size().lines)
         # Write a program that reads a value in meters and displays it 
         # converted into centimeters and millimeters.
 
-        n = float(input('Enter a number and see the conversion into centimeters and millimeters a number: '))
+        n = float(input('Enter a number in metros and see the conversion into centimeters and millimeters a number: '))
         print('Cm: {}'.format(n * 100))
         print('Mm: {}'.format(n * 1000))
+        goBackMain()
 
     elif c == 10:
         print("\n" * os.get_terminal_size().lines)
@@ -115,6 +118,8 @@ def main():
         for i in range (1, 11): # Repetition structure to calculate the multiplication table
             print('{} x {} = {}'.format(n, i , n*i)) # Print to show the results
 
+        goBackMain()
+
     elif c == 11:
         print("\n" * os.get_terminal_size().lines)
         height = float(input('Enter the wall height: '))
@@ -122,9 +127,11 @@ def main():
         area = width * height
         ink = area/2
         print('Paint required : {:.2f}'.format(ink))
+        goBackMain()
 
     elif c == 12:
         print("\n" * os.get_terminal_size().lines)
+
 
     elif c == 13: 
         print("\n" * os.get_terminal_size().lines)
