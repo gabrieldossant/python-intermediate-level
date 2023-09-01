@@ -62,10 +62,10 @@ def brlCalculate(x):
         goBackMenu()
     elif x == 2:
         print('|----------------------------------|')
-        print('| ---   ENTER A NUMBER  (EUR)  --- |')
+        print('| ---   ENTER A NUMBER  (BRL)  --- |')
         print('|----------------------------------|')
         conv = float(input('| : '))
-        res = conv / 4.90
+        res = conv / 5.37
         print("\n" * os.get_terminal_size().lines)
         print('|----------------------------------|')
         print('| (BRL): R$ {} | (EUR): R$ {:.1f}  |'.format(conv, res))
@@ -74,18 +74,18 @@ def brlCalculate(x):
         goBackMenu()
     elif x == 3:
         print('|----------------------------------|')
-        print('| ---   ENTER A NUMBER  (B)  --- |')
+        print('| ---   ENTER A NUMBER  (BRL)  --- |')
         print('|----------------------------------|')
         conv = float(input('| : '))
-        res = conv / 4.90
+        res = conv / 6.28
         print("\n" * os.get_terminal_size().lines)
         print('|----------------------------------|')
-        print('| (BRL): R$ {} | (USD): R$ {:.1f}  |'.format(conv, res))
+        print('| (BRL): R$ {} | (GBP): R$ {:.1f}  |'.format(conv, res))
         print('|----------------------------------|')
         print('|                                  |')
         goBackMenu()
     else:
-        errorChooseBrl
+        errorChooseBrl()
 
 def usd():
     print('|----------------------------------|')
@@ -112,7 +112,6 @@ def usdCalculate(x):
     print('|----------------------------------|')
     print('|                                  |')
     goBackMenu()
-
 
 def eur():
     print('|----------------------------------|')
@@ -159,20 +158,50 @@ def errorCaracter():
 def errorChooseBrl():
     print("\n" * os.get_terminal_size().lines)
     print('|----------------------------------|')
-    print('| -- ! Unrecognizable NUMBER ! -- |')
+    print('| -- ! Unrecognizable  NUMBER ! -- |')
     print('|----------------------------------|')
-    print('| --          TYPE ONLY         -- |')
+    print('| --         TYPE ONLY          -- |')
     print('|      [ 1 ] / [ 2 ] / [ 3 ]       |')
     print('|----------------------------------|')
+    brl()
 
+def errorChooseUsd():
+    print("\n" * os.get_terminal_size().lines)
+    print('|----------------------------------|')
+    print('| -- ! Unrecognizable  NUMBER ! -- |')
+    print('|----------------------------------|')
+    print('| --         TYPE ONLY          -- |')
+    print('|      [ 1 ] / [ 2 ] / [ 3 ]       |')
+    print('|----------------------------------|')
+    usd()
+
+def errorChooseEur():
+    print("\n" * os.get_terminal_size().lines)
+    print('|----------------------------------|')
+    print('| -- ! Unrecognizable  NUMBER ! -- |')
+    print('|----------------------------------|')
+    print('| --         TYPE ONLY          -- |')
+    print('|      [ 1 ] / [ 2 ] / [ 3 ]       |')
+    print('|----------------------------------|')
+    eur()
+
+def errorChooseGbp():
+    print("\n" * os.get_terminal_size().lines)
+    print('|----------------------------------|')
+    print('| -- ! Unrecognizable  NUMBER ! -- |')
+    print('|----------------------------------|')
+    print('| --         TYPE ONLY          -- |')
+    print('|      [ 1 ] / [ 2 ] / [ 3 ]       |')
+    print('|----------------------------------|')
+    gbp()
 
 def errorNumber():
     print("\n" * os.get_terminal_size().lines)
     print('|----------------------------------|')
-    print('| -- ! Unrecognizable NUMBER ! -- |')
+    print('| -- ! Unrecognizable  NUMBER ! -- |')
     print('|----------------------------------|')
     print('| --         TYPE ONLY          -- |')
-    print('|  [ 1 ] [ 2 ] [ 3 ] [ 4 ] [ 0 ]  |')
+    print('|  [ 1 ] [ 2 ] [ 3 ] [ 4 ] [ 0 ]   |')
     print('|----------------------------------|')
     chooseFrom()
 
@@ -182,10 +211,13 @@ def goBackMenu():
         print("\n" * os.get_terminal_size().lines)
         chooseFrom()
     elif r.upper()[0] == "N":
+        print("\n" * os.get_terminal_size().lines)
         print('|----------------------------------|')
-        print('|         T H A N K Y O U          |')
+        print('| ---    CURRENCY CONVERSOR    --- |')
         print('|----------------------------------|')
-        exit()
+        print('|         T H A N K  Y O U         |')
+        print('|----------------------------------|s')s
+        exit()    
     else:
         errorCaracter()
 
