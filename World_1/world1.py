@@ -1,4 +1,6 @@
 import os 
+import math 
+
 
 def main():
     print(
@@ -9,11 +11,11 @@ def main():
         '|                                                  |\n'
         '|          A L L   T H E   P R O J E C T S         |\n'
         '|                                                  |\n'
-        '|        [1] 001           |       [2] 002         |\n'
-        '|        [3] 003           |       [4] 004         |\n'
-        '|        [5] 005           |       [6] 006         |\n'
-        '|        [7] 007           |       [8] 008         |\n'
-        '|        [9] 009           |       [10] 010        |\n'
+        '|        [01] 001          |       [02] 002        |\n'
+        '|        [03] 003          |       [04] 004        |\n'
+        '|        [05] 005          |       [06] 006        |\n'
+        '|        [07] 007          |       [08] 008        |\n'
+        '|        [09] 009          |       [10] 010        |\n'
         '|        [11] 011          |       [12] 012        |\n'
         '|        [13] 013          |       [14] 014        |\n'
         '|        [15] 015          |       [16] 016        |\n'
@@ -55,6 +57,7 @@ def main():
     elif c == 4:
         print("\n" * os.get_terminal_size().lines)
 
+
     elif c == 5:
         print("\n" * os.get_terminal_size().lines)
         # Arithmetical operations
@@ -85,8 +88,8 @@ def main():
         # Create an algorithm that reads a number and shows its double, triple and square root
 
         n = int(input('Enter a number: '))
-        print('Double: {}'.format(n*n))
-        print('Triple: {}'.format(n*n*n))
+        print('Double: {}'.format(n*2))
+        print('Triple: {}'.format(n*3))
         print('Square root: {:.2f}'.format(n**(1/2)))
         goBackMain()
 
@@ -126,30 +129,60 @@ def main():
         width = float(input('Enter the wall width: '))
         area = width * height
         ink = area/2
+        print('Your wall has a dimension of : {}x{} and your area is : {}m²'.format(height, width, area))
         print('Paint required : {:.2f}'.format(ink))
         goBackMain()
 
     elif c == 12:
         print("\n" * os.get_terminal_size().lines)
-
+        product = float(input('Enter the value of a product: '))
+        disc = (product * 5)/100
+        print('The product discount is : {:.2f}'.format(disc))
+        print('The final value of the product is : {:.2f}'.format(product - disc))
+        goBackMain()
 
     elif c == 13: 
         print("\n" * os.get_terminal_size().lines)
+        salary = float(input('Enter the value of your salary: '))
+        increase = salary/0.15
+        print("Your new salary will be {}".format(salary + increase ))
+        goBackMain()
 
     elif c == 14:
         print("\n" * os.get_terminal_size().lines)
+        c = float(input('Enter the value in celcius: '))
+        f = ((9*c)/5)+35
+        print('The temperature converted from Celcius {:.2f} to Fire {:.2f}'.format(c, f))
+        goBackMain()
 
     elif c == 15:
         print("\n" * os.get_terminal_size().lines)
+        days = float(input('How many days rent? '))
+        km = float(input('How many Km driven? '))
+        pay = (days * 60) + (km * 0.15)
+        print('The total rent payable is : R$ {}'.format(pay))
+        goBackMain()
 
     elif c == 16: 
+        #
         print("\n" * os.get_terminal_size().lines)
+
+        num = float(input('Enter a number: '))
+        print('The number typed is {}'.format(num))
+        print('The number around is {}'.format(int(num)))
+        goBackMain()
 
     elif c == 17:
         print("\n" * os.get_terminal_size().lines)
+        opposite = float(input('Enter the opposite cateto: '))
+        adjacent = float(input('Enter the adjacent cateto: '))
+        hypotenuse = math.sqrt(pow(opposite, 2) + pow(adjacent, 2))
+        print('The Hypotenuse is {:.2f}'.format((hypotenuse)))
+        goBackMain()
 
     elif c == 18:
         print("\n" * os.get_terminal_size().lines)
+
 
     elif c == 19:
         print("\n" * os.get_terminal_size().lines)
