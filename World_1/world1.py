@@ -28,7 +28,7 @@ def main():
         '|        [33] 033          |       [34] 034        |\n'
         '|                                                  |'
     )
-    c = int(input('| [ 1 ] / [ 2 ] / [ 3 ] : '))
+    c = int(input('| Enter : '))
     if c == 1:
         print("\n" * os.get_terminal_size().lines)
         name = input("Enter your name: ")

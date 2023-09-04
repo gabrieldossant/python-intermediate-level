@@ -295,7 +295,7 @@ def goBackMenu():
         print('| ---    CURRENCY CONVERSOR    --- |')
         print('|----------------------------------|')
         print('|         T H A N K  Y O U         |')
-        print('|----------------------------------|s')
+        print('|----------------------------------|')
         exit()    
     else:
         errorCaracter()
