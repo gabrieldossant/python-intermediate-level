@@ -1,6 +1,6 @@
 import os 
 import math 
-
+import random
 
 def main():
     print(
@@ -124,6 +124,9 @@ def main():
         goBackMain()
 
     elif c == 11:
+        # Make a program that calculates the area and height of a wall and shows 
+        # the amount of paint required to paint the wall
+
         print("\n" * os.get_terminal_size().lines)
         height = float(input('Enter the wall height: '))
         width = float(input('Enter the wall width: '))
@@ -134,6 +137,8 @@ def main():
         goBackMain()
 
     elif c == 12:
+        # Make a program that reads the value of a product and prints the result with a 5 percent discount
+
         print("\n" * os.get_terminal_size().lines)
         product = float(input('Enter the value of a product: '))
         disc = (product * 5)/100
@@ -142,6 +147,8 @@ def main():
         goBackMain()
 
     elif c == 13: 
+        # Calculate a 10% salary increase
+
         print("\n" * os.get_terminal_size().lines)
         salary = float(input('Enter the value of your salary: '))
         increase = salary/0.15
@@ -149,13 +156,17 @@ def main():
         goBackMain()
 
     elif c == 14:
+        # Make a conversion from Celcius to Fahrenheit
+
         print("\n" * os.get_terminal_size().lines)
-        c = float(input('Enter the value in celcius: '))
+        c = float(input('Enter the value in celsius: '))
         f = ((9*c)/5)+35
-        print('The temperature converted from Celcius {:.2f} to Fire {:.2f}'.format(c, f))
+        print('The temperature converted from Celsius {:.2f} to Fire {:.2f}'.format(c, f))
         goBackMain()
 
     elif c == 15:
+        # Calculate the days and kilometers traveled to find out the rental price
+
         print("\n" * os.get_terminal_size().lines)
         days = float(input('How many days rent? '))
         km = float(input('How many Km driven? '))
@@ -164,15 +175,17 @@ def main():
         goBackMain()
 
     elif c == 16: 
-        #
-        print("\n" * os.get_terminal_size().lines)
+        # Round a number to integer
 
+        print("\n" * os.get_terminal_size().lines)
         num = float(input('Enter a number: '))
         print('The number typed is {}'.format(num))
         print('The number around is {}'.format(int(num)))
         goBackMain()
 
     elif c == 17:
+        # Calculate the opposite and adjacent to find hipotenusa 
+
         print("\n" * os.get_terminal_size().lines)
         opposite = float(input('Enter the opposite cateto: '))
         adjacent = float(input('Enter the adjacent cateto: '))
@@ -181,14 +194,36 @@ def main():
         goBackMain()
 
     elif c == 18:
-        print("\n" * os.get_terminal_size().lines)
+        # Calculate the seno, coseno and tangente of an angle.
 
+        print("\n" * os.get_terminal_size().lines)
+        angle = float(input('Enter the angle: '))
+        seno = math.sin(math.radians(angle))
+        coseno = math.cos(math.radians(angle))
+        tangente = math.tan(math.radians(angle))
+        print('Seno: {:.2f}\nCoseno: {:.2f}\nTangente: {:.2f}\n'.format(seno, coseno, tangente))
+        goBackMain()
 
     elif c == 19:
+        # Guess names
+
         print("\n" * os.get_terminal_size().lines)
+        names = ['Rebeca', 'Lucas', 'Gabriel', 'Mateus', 'Thiago']
+        print(names)
+        guess = random.randint(0, 4)
+        print('The person drawn is {}'.format(names[guess]))
+        goBackMain()
 
     elif c == 20:
+        # Organize the order of presentation
+
         print("\n" * os.get_terminal_size().lines)
+        namesOrder = []
+        names = ['Rebeca', 'Lucas', 'Gabriel', 'Mateus', 'Thiago']
+        print(names)
+        guess = random.randint(0, 4)
+        namesOrder.append(random.randint(0, 4))
+        print(namesOrder)
 
     elif c == 21:
         print("\n" * os.get_terminal_size().lines)
