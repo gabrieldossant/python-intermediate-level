@@ -221,9 +221,10 @@ def main():
         namesOrder = []
         names = ['Rebeca', 'Lucas', 'Gabriel', 'Mateus', 'Thiago']
         print(names)
-        guess = random.randint(0, 4)
-        namesOrder.append(random.randint(0, 4))
-        print(namesOrder)
+        for i in range(len(names)):
+            guess = random.randint(0, 4)
+            namesOrder.append()
+            print(namesOrder)
 
     elif c == 21:
         print("\n" * os.get_terminal_size().lines)
