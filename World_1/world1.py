@@ -218,16 +218,21 @@ def main():
         # Organize the order of presentation
 
         print("\n" * os.get_terminal_size().lines)
-        namesOrder = []
         names = ['Rebeca', 'Lucas', 'Gabriel', 'Mateus', 'Thiago']
-        print(names)
-        for i in range(len(names)):
-            guess = random.randint(0, 4)
-            namesOrder.append()
-            print(namesOrder)
+        random.shuffle(names)
+        i = 0
+        while i <= len(names): 
+            print('{}º - {}'.format(i+1, names[i]))
+            i += 1
+
+        goBackMain()
 
     elif c == 21:
+        # Make a Python program that open and play a MP3 file.        
+        
         print("\n" * os.get_terminal_size().lines)
+        
+
 
     elif c == 22:
         print("\n" * os.get_terminal_size().lines)
